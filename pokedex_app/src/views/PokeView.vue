@@ -19,14 +19,14 @@
           <p class="number">{{ '#'+requestedPokemon.id }}</p>
         </div> 
       </nav>
-      <div class="top rounded-3xl overflow-hidden relative mx-8" :class="(requestedPokemon.types) ? colors[requestedPokemon.types[0].type.name] : ''">
+      <div class="top aspect-[2/1] rounded-3xl overflow-hidden relative mx-8" :class="(requestedPokemon.types) ? colors[requestedPokemon.types[0].type.name] : ''">
 
       <div class="bubble w-2/5 aspect-square bg-gradient-to-b from-white to-transparent opacity-25 -rotate-45 rounded-full absolute -top-8 -left-8"></div>
       
       <div class="pokeMask w-full aspect-square bg-white bg-opacity-40 absolute -bottom-28 -right-28" style="mask-image:url(/img/pokeball.svg);mask-position:center; mask-size:cover"></div>
 
       <div class="pokePic w-1/2 flex mx-auto aspect-square relative z-10">
-        <img v-if="requestedPokemon.sprites" :src="requestedPokemon.sprites.front_default" alt="">
+        <img class="w-full" v-if="requestedPokemon.sprites" :src="requestedPokemon.sprites.front_default" alt="">
       </div>
     </div>
 
