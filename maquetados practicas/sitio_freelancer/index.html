@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-cyan-50">
+ 
+    <!-- nav bar -->
+        <h1 class="font-bold text-center text-lg">Martin Jáuregui</h1>
+    
+        <div class="bg-blue-100 w-full flex justify-around py-4 font-bold text-white bg-cyan-500">
+            <p>Inicio</p>
+            <p>Nosotros</p>
+            <p>Clientes</p>
+            <p>Contactos</p>
+        </div>
+        
+    <!-- Banner -->
+        <div class="aspect-[13/3] bg-[url('/img/hero.jpg')] bg-cover mb-16 text-center flex flex-col justify-center items-center gap-8">      
+            <p class="font-bold text-lg text-white text-5xl">Diseño y desarrollo Web Freelancer</p>
+            <div class="text-white text-2xl flex items-center">
+                <img class="h-10" src="/img/location.svg" alt="" >
+                <p>Concordia, Entre Ríos</p>
+            </div> 
+            <!--preguntar a adro porque no se aplica el fit sin el mx auto-->
+            <p class="bg-blue-500 text-white px-8 py-1 w-fit rounded-md">Contactanos</p> 
+        </div>
+
+    <!-- Container de tarjetas     -->
+        <div class="container bg-white mx-auto rounded-md p-8 mb-8 shadow-xl">
+
+            <p class="text-center text-3xl mb-16">Mis Servicios</p>
+            
+            <div class="tarjetas flex gap-8">
+
+                <div class="tarjeta w-full flex flex-col items-center justify-center">
+                    <div class="p-8 bg-yellow-500 rounded-full w-fit">
+
+                        <img src="/icons/compass.svg" alt=""></div>
+                    
+                    <p class="text-center text-2xl">Diseño Web</p>
+
+                    <p class="break-all">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, doloribus debitis sequi ab voluptates voluptate voluptatum.</p>
+
+                </div>
+                
+                <div class="tarjeta w-full flex flex-col items-center justify-center">
+                    <div class="p-8 bg-yellow-500 rounded-full w-fit">
+                        <img src="/icons/location-save.svg" alt="">
+                    </div> 
+
+                        <p class="text-center text-2xl">Aplicaciones Web</p>
+                        <p class="break-all">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, doloribus debitis sequi ab voluptates voluptate voluptatum.</p>
+                       
+                </div>
+
+                <div class="tarjeta w-full flex flex-col items-center justify-center">
+                    <div class="p-8 bg-yellow-500 rounded-full w-fit" >
+                        <img src="/icons/subflow-local.svg" alt="">
+                    </div>
+                    
+                    <p class="text-center text-2xl ">E-Commerce</p>
+                    <p class="text-base" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, doloribus debitis sequi ab voluptates voluptate voluptatum</p>
+                </div>
+
+            </div> 
+            
+            <!-- FORMULARIO -->
+            <p class="text-center text-3xl mt-16 mb-8 ">Contactos</p>
+
+            <div class="w-3/4 mx-auto pb-8 px-8 bg-gray-400 rounded-md ">
+
+                <p class="mb-8 pt-4 text-center text-yellow-200">CONTACTANOS LLENANDO TODOS LOS CAMPOS</p>
+                
+                <form action="">
+                    <fieldset class="flex flex-col gap-8">
+                        <div class="row flex gap-8">
+                            <div class="field w-full flex flex-col">
+                                <label for="">Nombre</label>
+                                <input type="text">
+                            </div>
+                            <div class="field w-full flex flex-col">
+                                <label for="">Telefono</label>
+                                <input type="tel" name="" id="">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="field w-full flex flex-col">
+                                <label for="">Correo</label>
+                                <input type="mail" name="" id="">
+                            </div>
+                        </div>
+
+                        <div class="row w-full flex flex-col gap-2">
+                            <div class="field">
+                                <label for="">Mensaje</label>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div> 
+                        </div>  
+                    </fieldset>
+                </form>
+            </div>
+        </div>  
+
+            <p class="text-center  mb-4 text-gray-500  ">Todos los derechos reservados</p>
+        
+</body>
+</html>

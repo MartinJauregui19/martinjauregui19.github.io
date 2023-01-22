@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="lg:container lg:mx-auto">
+            <div class="navBar w-full h-16 px-8 md:px-0 bg-red-500 flex items-center justify-between">
+                <div class="logo">
+                    <p>LOGO</p>
+                </div>
+                <div class="menu gap-8 text-gray-500 hidden md:flex">
+                    <a v-for="option,index in menuOptions" :key="index" :href="option.link">{{option.text}}</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner w-full py-16 aspect-video lg:aspect-[16/9] bg-gray-300 -mt-16 bg-[url('/img/background.jpg')] bg-center bg-cover">
+            <div class="lg:container lg:mx-auto h-full">
+                <div class="bannerContent w-1/2 h-full flex flex-col justify-center gap-8">
+                    <p class="text-black text-4xl">TITULO</p>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="button bg-blue-700 hover:bg-blue-500 text-white py-2 px-4 rounded-md w-fit cursor-pointer">
+                        <p>Button</p>
+                    </div>
+
+                </div>
+            </div>
+            
+            
+        </div>
+
+        <div class="lg:container lg:mx-auto lg:-mt-16">
+            <div class="tarjetas w-full bg-white lg:shadow-lg rounded-md flex flex-col lg:flex-row gap-8 p-8">
+                <div class="tarjeta w-full">
+                    <img class="w-1/6 mb-8" :src="card.icon" alt="">
+                    <p>{{card.title}}</p>
+                </div>
+                <div class="tarjeta w-full">
+                    <img class="w-1/6 mb-8"  src="/img/accumulation-snow.svg" alt="">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="tarjeta w-full">
+                    <img class="w-1/6 mb-8" src="/img/airport-01.svg" alt="">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+<script>
+    const { createApp } = Vue
+
+    createApp({
+        data() {
+            return {
+                menuOptions:[
+                    {
+                        text: 'Inicio',
+                        link: '/',
+                    },
+                    {
+                        text: 'Sobre Nosotros',
+                        link: '/sobre-notros.html'
+                    }
+                ],
+                cards:[
+                    {
+                        title: 'titulo',
+                        text: 'texto',
+                        icon: '/img/url'
+                    }
+                ]
+            }
+        }
+    }).mount('#app')
+</script>
